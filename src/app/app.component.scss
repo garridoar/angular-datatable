@@ -1,0 +1,11 @@
+.remaining-space {
+    flex: 1 1 auto;
+}
+
+#users-card {
+    width:700px;
+    &:hover {
+        opacity: 0.8;
+        // cursor: pointer;
+    }
+}
