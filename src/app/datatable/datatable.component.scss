@@ -1,3 +1,16 @@
+div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .full-width-table {
   width: 100%;
+}
+
+.green-text {
+  color: #3c763d !important;
+}
+
+button:focus {
+  outline: none;
 }

@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>
+    <button mat-icon-button color="warn">
+        <!-- <mat-icon style="padding-bottom: 5px;">error_outline</mat-icon> -->
+        <mat-icon>{{ data.icon }}</mat-icon>
+    </button>
+    <!-- Eliminar banco -->
+    {{ data.title }}
+</h1>
+
+<div mat-dialog-content>
+    <!-- <p>Esta seguro que desea borrar el registro?</p> -->
+    <p>{{ data.message }}</p>
+</div>
+<div mat-dialog-actions>
+    <div class="flexRight"></div>
+    <button mat-button (click)="onDismiss()">Cancelar</button>
+    <button mat-button color="warn" [mat-dialog-close]="data" cdkFocusInitial (click)="onConfirm()">{{ data.action }}</button>
+</div>

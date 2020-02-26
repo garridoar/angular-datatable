@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Nuevo banco</mat-card-title>
+            <mat-card-subtitle>Agregue un banco a la base de datos</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <form #bankForm="ngForm" class="bank-form" (ngSubmit)="createNewBank(bankForm)">
+                <mat-form-field class="full-width">
+                    <mat-label>Nombre del banco</mat-label>
+                    <input ngModel name="name" matInput  type="text" required minlength="3" style="text-transform: capitalize;">
+                    <mat-error *ngIf="bankForm.controls.name?.errors?.required">Debe especificar un nombre</mat-error>
+                    <mat-error *ngIf="bankForm.controls.name?.errors?.minlength">Debe contener al menos 3 caracteres</mat-error>
+                </mat-form-field>
+                <button class="mt-10" mat-stroked-button color="primary" type="submit">Crear</button>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>
+    <div>

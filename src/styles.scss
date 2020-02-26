@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~animate.css/animate.min';
+// TODO: Read the API doc and import only used files
+@import '~angular-notifier/styles.scss';
+@import '~@sweetalert2/theme-material-ui/material-ui.scss';
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flexRight {
+    flex: 1 1 auto;
+}

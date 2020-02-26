@@ -21,7 +21,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { GridComponent } from './pages/grid/grid.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormfieldComponent } from './formfield/formfield.component';
+import { FormsModule } from '@angular/forms';
+import { EditBankTemplateComponent } from './templates/edit-bank-template/edit-bank-template.component';
+import { NotifierModule } from 'angular-notifier';
+import { ConfirmDialogComponent } from './templates/confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -29,7 +34,10 @@ import { GridComponent } from './pages/grid/grid.component';
     AppComponent,
     MainComponent,
     DatatableComponent,
-    GridComponent
+    GridComponent,
+    FormfieldComponent,
+    EditBankTemplateComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,26 @@ import { GridComponent } from './pages/grid/grid.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    FormsModule,
+    NotifierModule.withConfig({
+      position: {
+        horizontal: {
+            position: "right",
+            distance: 12
+        },
+        vertical: {
+            position: "top",
+            distance: 12,
+            gap: 10
+        }
+    }
+    })
+  ],
+  entryComponents: [
+    EditBankTemplateComponent,
+    ConfirmDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,15 @@
+mat-icon {
+    padding-bottom: 5px;
+}
+
+@media(min-width: 390px) and ( max-width: 425px ) {
+    [mat-dialog-content] p {
+        font-size: 0.9rem;
+    }
+}
+
+@media( max-width: 390px ) {
+    [mat-dialog-content] p {
+        font-size: 0.8rem;
+    }
+}

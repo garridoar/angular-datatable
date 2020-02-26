@@ -1,0 +1,20 @@
+<div class="full-width">
+  <h1 mat-dialog-title class="mt-20 mb-0">Editar banco</h1>
+  <div class="mb-15">
+    <p class="subtitle">Complete los campos para editar el banco</p>
+  </div>
+  <mat-divider class="mt-20 mb-20"></mat-divider>
+  <form #bankForm="ngForm" class="bank-form" (ngSubmit)="onConfirm(bankForm, data)">
+    <mat-form-field class="full-width">
+      <mat-label>Nombre del banco</mat-label>
+      <input [ngModel]="data.name" name="name" matInput type="text" required minlength="3">
+      <mat-error *ngIf="bankForm.controls.name?.errors?.required">Debe especificar un nombre</mat-error>
+      <mat-error *ngIf="bankForm.controls.name?.errors?.minlength">Debe contener al menos 3 caracteres</mat-error>
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <div class="flexRight"></div>
+      <button mat-button (click)="onNoClick()" type="button">Cancelar</button>
+      <button mat-stroked-button color="accent" cdkFocusInitial type="submit">Modificar</button>
+    </div>
+  </form>
+</div>
